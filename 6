@@ -54,7 +54,18 @@ Section:NewButton("Fe Tall R15", "You Need To Have Youre Body Height Max", funct
 loadstring(game:HttpGet('https://raw.githubusercontent.com/riotsgrave/riotswrld/main/tallr15',true))()
 end)
 
+Section:NewButton("Btools", "You Can Change The Map", function()
+    loadstring(game:HttpGet("https://cdn.wearedevs.net/scripts/BTools.txt"))()
+end)
 
+Section:NewButton("God Mode (Kinda Laggy)", "You Can Not Be Killed", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/FwfNEqYz", true))()
+end)
+
+Section:NewButton("c00lkid Gui", "c00lkid The most Powerful Hacker", function()
+     loadstring(game:GetObjects('rbxassetid://473373681')[1].Source)()
+
+end)
 
 --fly tabs
 local Tab = Window:NewTab("Fly")
@@ -116,4 +127,33 @@ chr.RightUpperLeg.MeshId = "http://www.roblox.com/asset/?id=902942096"
 chr.RightUpperLeg.TextureID = "http://roblox.com/asset/?id=902843398"
 chr.RightFoot.MeshId = "902942089"
 chr.RightFoot.Transparency = "1"
+end)
+
+--tabs Hub
+local Tab = Window:NewTab("Hub Games")
+local Section = Tab:NewSection("Hub")
+
+--Hub
+Section:NewButton("Owl Hub", "30+ Games Supported", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/CriShoux/OwlHub/master/OwlHub.txt"))();
+end)
+
+Section:NewButton("Dark Hub", "12+ Games Supported", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/RandomAdamYT/DarkHub/master/Init", true))()
+end)
+
+Section:NewButton("Coca Hub", "30+ Gmes Supported", function()
+    loadstring(game:HttpGet("https://codeberg.org/CokkaHub/Loadstring/raw/branch/main/CokkaHub.lua"))()
+end)
+
+Section:NewButton("Kraken Hub", "20+ Games Supported", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Denverrz/scripts/master/Kraken_Hub.txt", true))()
+end)
+
+Section:NewButton("Thunder Hub", "50+ games Supported", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/ThunderZ-05/HUB/main/Script"))()
+end)
+
+Section:NewButton("Ghost Hub", "3 Gmes Supported", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/ScriptRUs/GhostHub/main/GhostHubScript.lua"))()
 end)
