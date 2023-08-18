@@ -1,0 +1,106 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("BLOODBANDER FE", "Sentinel")
+
+--Tabs Cframe Speed / Jump
+local Tab = Window:NewTab("Speed/Jump")
+local Section = Tab:NewSection("Speed/Jump")
+
+
+--Cframe Speed / Jump
+Section:NewSlider("Speed", "Gives you Speed", 1000, 16, function(s) -- 500 (MaxValue) | 0 (MinValue)
+    game.Players.LocalPlayer.Character.Humanoid.WadlkSpeed = s
+    end)
+
+    Section:NewSlider("JumpPower", "You Cn Jump Higher", 500, 50, function(s) -- 500 (MaxValue) | 0 (MinValue)
+    game.Players.LocalPlayer.Character.Humanoid.JumpPower = s
+end)
+--tabs Fun
+local Tab = Window:NewTab("Fun")
+local Section = Tab:NewSection("Fun")
+
+--Fun
+Section:NewButton("Chat Spoofer", "ButtonInfo", function()
+    loadstring(game:HttpGet(('https://pastebin.com/raw/djBfk8Li'),true))()
+end)
+
+Section:NewButton("Click Tp Tool", "You Can Tp", function()
+    loadstring(game:HttpGet(('https://raw.githubusercontent.com/drissez1/Click-Tp-Tool/main/Click%20Tp%20tool'),true))()
+end)
+
+Section:NewToggle("Noclip", "You Can Walk On Walls", function(state)
+    if state then
+        loadstring(game:HttpGet(('https://raw.githubusercontent.com/drissez1/Noclip/main/Noclip'),true))()
+    else
+        loadstring(game:HttpGet(('https://raw.githubusercontent.com/drissez1/Noclip/main/Noclip'),true))()
+    end
+end)
+Section:NewButton("18+ Gui", "Dont Click This If Youre Not 18", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/VNSURVIV/Pendulum-Hub/main/Neko%20Sex%20Script%20Pendulum%20Hub'))()
+end)
+
+Section:NewButton("Spy People", "You Can Spy Anyone", function()
+    loadstring(game:HttpGet(('https://raw.githubusercontent.com/drissez1/Spy/main/Spy'),true))()
+end)
+
+--fly tabs
+local Tab = Window:NewTab("Fly")
+local Section = Tab:NewSection("Main Fly")
+
+--fly
+Section:NewButton("Fly gui", "WARNING THIS FLY DIDNT TEST YET YOU RISK A BAN", function()
+    --ARCEUS X FLY V2 SCRIPT BY me_ozoneYT
+loadstring("\108\111\97\100\115\116\114\105\110\103\40\103\97\109\101\58\72\116\116\112\71\101\116\40\40\39\104\116\116\112\115\58\47\47\103\105\115\116\46\103\105\116\104\117\98\117\115\101\114\99\111\110\116\101\110\116\46\99\111\109\47\109\101\111\122\111\110\101\89\84\47\98\102\48\51\55\100\102\102\57\102\48\97\55\48\48\49\55\51\48\52\100\100\100\54\55\102\100\99\100\51\55\48\47\114\97\119\47\101\49\52\101\55\52\102\52\50\53\98\48\54\48\100\102\53\50\51\51\52\51\99\102\51\48\98\55\56\55\48\55\52\101\98\51\99\53\100\50\47\97\114\99\101\117\115\37\50\53\50\48\120\37\50\53\50\48\102\108\121\37\50\53\50\48\50\37\50\53\50\48\111\98\102\108\117\99\97\116\111\114\39\41\44\116\114\117\101\41\41\40\41\10\10")()
+end)
+--tab Gui
+local Tab = Window:NewTab("Executors")
+local Section = Tab:NewSection("Executors")
+--Gui
+Section:NewButton("Synapse X", "You Get Synape X For Free", function()
+    loadstring(game:HttpGet(('https://raw.githubusercontent.com/drissez1/SYNAPSE-REMAKE/main/SYNAPSE'),true))()
+end)
+
+Section:NewButton("Krnl", "Krnl For All Platfrorm", function()
+    loadstring(game:HttpGet(('https://raw.githubusercontent.com/drissez1/KRNL/main/KRNL'),true))()
+end)
+
+Section:NewButton("Arceus X (Mobile)", "Arceus X V3", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/AZYsGithub/chillz-workshop/main/Arceus%20X%20V3"))()
+end)
+
+--tabs avatar Editor
+local Tab = Window:NewTab("Avatar Editor")
+local Section = Tab:NewSection("Avatar Editor")
+
+--avatar editor
+Section:NewButton("Animation", "You Can Change Youre Animation", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/drissez1/avatar-editor/main/animation"))()
+end)
+Section:NewButton("Headless", "Headless", function()
+    game.Players.LocalPlayer.Character.Head.Transparency = 1
+game.Players.LocalPlayer.Character.Head.Transparency = 1
+for i,v in pairs(game.Players.LocalPlayer.Character.Head:GetChildren()) do
+if (v:IsA("Decal")) then
+v.Transparency = 1
+end
+end
+end)
+
+Section:NewButton("Korblox", "Korblox", function()
+    local ply = game.Players.LocalPlayer
+local chr = ply.Character
+chr.RightLowerLeg.MeshId = "902942093"
+chr.RightLowerLeg.Transparency = "1"
+chr.RightUpperLeg.MeshId = "http://www.roblox.com/asset/?id=902942096"
+chr.RightUpperLeg.TextureID = "http://roblox.com/asset/?id=902843398"
+chr.RightFoot.MeshId = "902942089"
+chr.RightFoot.Transparency = "1"
+end)
+
+-- tab others
+local Tab = Window:NewTab("others (Alireza)")
+local Section = Tab:NewSection("others")
+
+-- others 
+Section:NewButton("nekoo script", "", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/drissez1/neko/main/nekoo"))()
+end)
