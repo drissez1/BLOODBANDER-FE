@@ -2,8 +2,8 @@ local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHept
 local Window = Library.CreateLib("BLOODBANDER FE", "Sentinel")
 
 --Tabs Cframe Speed / Jump
-local Tab = Window:NewTab("Speed/Jump")
-local Section = Tab:NewSection("Speed/Jump")
+local Tab = Window:NewTab("Player Changer")
+local Section = Tab:NewSection("Player Changer")
 
 
 --Cframe Speed / Jump
@@ -11,17 +11,25 @@ Section:NewSlider("Speed", "Gives you Speed", 1000, 16, function(s) -- 500 (MaxV
     game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
     end)
 
-    Section:NewSlider("JumpPower", "You Cn Jump Higher", 500, 50, function(s) -- 500 (MaxValue) | 0 (MinValue)
+    Section:NewSlider("JumpPower", "You Can Jump Higher", 500, 50, function(s) -- 500 (MaxValue) | 0 (MinValue)
     game.Players.LocalPlayer.Character.Humanoid.JumpPower = s
 end)
+
+Section:NewSlider("Gravity", "You Can Chnge Youre Gravity", 1000, 1, function(s) -- 500 (MaxValue) | 0 (MinValue)
+    game.workspace.Gravity = s
+end)
+
+Section:NewButton("Reset All", "Reset Gravity JumpPower And Speed", function()
+    game.Players.LocalPlayer.Character.Humanoid.JumpPower = 50
+    game.workspace.Gravity = 196.2
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
+end)
+
 --tabs Fun
 local Tab = Window:NewTab("Fun")
 local Section = Tab:NewSection("Fun")
 
 --Fun
-Section:NewButton("Chat Spoofer", "ButtonInfo", function()
-    loadstring(game:HttpGet(('https://pastebin.com/raw/djBfk8Li'),true))()
-end)
 
 Section:NewButton("Click Tp Tool", "You Can Tp", function()
     loadstring(game:HttpGet(('https://raw.githubusercontent.com/drissez1/Click-Tp-Tool/main/Click%20Tp%20tool'),true))()
@@ -34,12 +42,29 @@ Section:NewToggle("Noclip", "You Can Walk On Walls", function(state)
         loadstring(game:HttpGet(('https://raw.githubusercontent.com/drissez1/Noclip/main/Noclip'),true))()
     end
 end)
-Section:NewButton("18+ Gui", "Dont Click This If Youre Not 18", function()
-    loadstring(game:HttpGet('https://raw.githubusercontent.com/VNSURVIV/Pendulum-Hub/main/Neko%20Sex%20Script%20Pendulum%20Hub'))()
-end)
 
 Section:NewButton("Spy People", "You Can Spy Anyone", function()
     loadstring(game:HttpGet(('https://raw.githubusercontent.com/drissez1/Spy/main/Spy'),true))()
+end)
+
+Section:NewButton("Infinite Yield", "Admin Commands", function()
+    loadstring(game:HttpGet(('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'),true))()
+end)
+
+Section:NewButton("Fe Tall R15", "You Need To Have Youre Body Height Max", function()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/riotsgrave/riotswrld/main/tallr15',true))()
+end)
+
+Section:NewButton("Btools", "You Can Change The Map", function()
+    loadstring(game:HttpGet("https://cdn.wearedevs.net/scripts/BTools.txt"))()
+end)
+
+Section:NewButton("God Mode (Kinda Laggy)", "You Can Not Be Killed", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/FwfNEqYz", true))()
+end)
+
+Section:NewButton("Aimbot", "You Can Miss Any Shots", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/drissez1/Aimbot-/main/Silent%20Aim", true))()
 end)
 
 --fly tabs
@@ -47,14 +72,22 @@ local Tab = Window:NewTab("Fly")
 local Section = Tab:NewSection("Main Fly")
 
 --fly
-Section:NewButton("Fly gui", "WARNING THIS FLY DIDNT TEST YET YOU RISK A BAN", function()
+Section:NewButton("Fly Gui", "You Can Fly", function()
     --ARCEUS X FLY V2 SCRIPT BY me_ozoneYT
 loadstring("\108\111\97\100\115\116\114\105\110\103\40\103\97\109\101\58\72\116\116\112\71\101\116\40\40\39\104\116\116\112\115\58\47\47\103\105\115\116\46\103\105\116\104\117\98\117\115\101\114\99\111\110\116\101\110\116\46\99\111\109\47\109\101\111\122\111\110\101\89\84\47\98\102\48\51\55\100\102\102\57\102\48\97\55\48\48\49\55\51\48\52\100\100\100\54\55\102\100\99\100\51\55\48\47\114\97\119\47\101\49\52\101\55\52\102\52\50\53\98\48\54\48\100\102\53\50\51\51\52\51\99\102\51\48\98\55\56\55\48\55\52\101\98\51\99\53\100\50\47\97\114\99\101\117\115\37\50\53\50\48\120\37\50\53\50\48\102\108\121\37\50\53\50\48\50\37\50\53\50\48\111\98\102\108\117\99\97\116\111\114\39\41\44\116\114\117\101\41\41\40\41\10\10")()
 end)
---tab Gui
+Section:NewButton("Fly Jump", "You Can Fly When You Press Jump Use This With WalkSpeed", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/drissez1/Jump-FLY/main/fly',true))()
+end)
+
+Section:NewButton("Tool Fly", "A Tool That You Can Fly", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/drissez1/Jump-FLY/main/Tool%20Fly',true))()
+end)
+
+--tab Executors
 local Tab = Window:NewTab("Executors")
 local Section = Tab:NewSection("Executors")
---Gui
+--Executors
 Section:NewButton("Synapse X", "You Get Synape X For Free", function()
     loadstring(game:HttpGet(('https://raw.githubusercontent.com/drissez1/SYNAPSE-REMAKE/main/SYNAPSE'),true))()
 end)
@@ -65,4 +98,91 @@ end)
 
 Section:NewButton("Arceus X (Mobile)", "Arceus X V3", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/AZYsGithub/chillz-workshop/main/Arceus%20X%20V3"))()
+end)
+
+--tabs avatar Editor
+local Tab = Window:NewTab("Avatar Editor")
+local Section = Tab:NewSection("Avatar Editor")
+
+--avatar editor
+Section:NewButton("Animation", "You Can Change Youre Animation", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/drissez1/avatar-editor/main/animation"))()
+end)
+Section:NewButton("Headless", "Headless", function()
+    game.Players.LocalPlayer.Character.Head.Transparency = 1
+game.Players.LocalPlayer.Character.Head.Transparency = 1
+for i,v in pairs(game.Players.LocalPlayer.Character.Head:GetChildren()) do
+if (v:IsA("Decal")) then
+v.Transparency = 1
+end
+end
+end)
+
+Section:NewButton("Korblox", "Korblox", function()
+    local ply = game.Players.LocalPlayer
+local chr = ply.Character
+chr.RightLowerLeg.MeshId = "902942093"
+chr.RightLowerLeg.Transparency = "1"
+chr.RightUpperLeg.MeshId = "http://www.roblox.com/asset/?id=902942096"
+chr.RightUpperLeg.TextureID = "http://roblox.com/asset/?id=902843398"
+chr.RightFoot.MeshId = "902942089"
+chr.RightFoot.Transparency = "1"
+end)
+--tabs Gui
+local Tab = Window:NewTab("Gui")
+local Section = Tab:NewSection("Gui")
+
+--gui
+Section:NewButton("Fe Car Only R6", "You Can Be A Car", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/MonkoTubeYT/carscript/master/!carscript.lua',true))()
+end)
+
+Section:NewButton("c00lkid Gui", "c00lkid Was The most Powerful Hacker", function()
+     loadstring(game:GetObjects('rbxassetid://473373681')[1].Source)()
+end)
+
+Section:NewButton("Chat Spoofer", "ButtonInfo", function()
+    loadstring(game:HttpGet(('https://pastebin.com/raw/djBfk8Li'),true))()
+end)
+
+Section:NewButton("Kill Gui(Tools)", "You Can Kill Anyone", function()
+    loadstring(game:HttpGet(('https://raw.githubusercontent.com/drissez1/Kill/main/Killl%20Gui'),true))()
+end)
+
+Section:NewButton("Fling Gui(Tools) ", "You Can Fling Anyone", function()
+   loadstring(game:HttpGet(('https://raw.githubusercontent.com/drissez1/FLING/main/FE%20FLING'),true))()
+end)
+
+Section:NewButton("1x1x1x1 Gui", "1x1x1x1 One Of The Most Powerful Hacker", function()
+    loadstring(game:HttpGet(('https://raw.githubusercontent.com/drissez1/1x1x1/main/FE%20script'),true))()
+end)
+
+
+--tabs Hub
+local Tab = Window:NewTab("Hub Games")
+local Section = Tab:NewSection("Hub")
+
+--Hub
+Section:NewButton("Owl Hub", "30+ Games Supported", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/CriShoux/OwlHub/master/OwlHub.txt"))();
+end)
+
+Section:NewButton("Dark Hub", "12+ Games Supported", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/RandomAdamYT/DarkHub/master/Init", true))()
+end)
+
+Section:NewButton("Coca Hub", "30+ Gmes Supported", function()
+    loadstring(game:HttpGet("https://codeberg.org/CokkaHub/Loadstring/raw/branch/main/CokkaHub.lua"))()
+end)
+
+Section:NewButton("Kraken Hub", "20+ Games Supported", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Denverrz/scripts/master/Kraken_Hub.txt", true))()
+end)
+
+Section:NewButton("Thunder Hub", "50+ games Supported", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/ThunderZ-05/HUB/main/Script"))()
+end)
+
+Section:NewButton("Ghost Hub", "3 Games Supported", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/ScriptRUs/GhostHub/main/GhostHubScript.lua"))()
 end)
